@@ -41,25 +41,28 @@ p {
 
     display: flex;
     align-items: center;
-    /* justify-content: flex-end; */
+    justify-content: flex-end;
     align-content: space-around;
 }
 
 .nav .container ul {
     display: flex;
-    /* padding-left: 800px; */
    
 }
 
 .nav .container ul li {
     list-style: none;
-    margin-left: 50px;
+    margin-right: 50px;
     
 }
 
 .nav .container ul li a {
     text-decoration: none;
     color: #fff;
+}
+
+.nav__menu span {
+    padding-right: 200px;
 }
 
 .nav .container ul img {
@@ -71,7 +74,7 @@ p {
 
 .banner {
     width: 100%;
-    height: 90vh;
+    height: 75vh;
     background-image: url('../img/foto-banner.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -84,7 +87,10 @@ p {
 
 .banner__subtitle {
     text-align: center;
+    max-width: 475px;
 }
+
+/* BANNER */
 
 .btn {
     background: #829dad ;
@@ -99,7 +105,7 @@ p {
 
 .about {
     background: rgba(0, 0, 0, 0.747);
-    height: 170px;
+    height: 200px;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -109,6 +115,7 @@ p {
 .about p {
     color: #fff;
     font-size: 14px;
+    padding: 10px 400px 0 400px;
 }
 
 /* SIBÉRIA */
@@ -122,25 +129,27 @@ p {
 }
 
 .destination img {
-    max-width: 600px;
+    max-width: 550px;
 }
 
 .destination__text {
-    width: 180px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    margin-left: 40px;
+    flex-direction: column;
+    max-width: 250px;
+    margin-left: 13px;
+   }
+
+.destination__text h3 {
+    padding-bottom: 5px;
 }
 
-/* GROELANDIA e ANTARTIDA */
+/* GROENLANDIA e ANTARTIDA */
 
 .destination--groenlandia{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    
-    
+    justify-content: center;  
 }
 
 .destination--groenlandia img {
@@ -153,7 +162,7 @@ p {
     justify-content: center;
     background: #000;
     opacity: 0.9;
-    height: 272px;
+    height: 45vh;
     width: 408px;
     
 }
@@ -230,14 +239,112 @@ footer {
 
   /* MEDIA */
 
-  @media (max-width: 600px) {
+  @media (max-width: 425px) {
     
+    .nav {
+        background: #fff;
+        
+    }
+
     .nav .container ul li {
         display: none;
     }
 
     .nav .container ul img {
         display: block;
-        /* text-align: right; */
+        text-align: right;
+        margin-right: 15px;
+    }
+
+    h1 {
+        font-size: 55px;
+        text-align: center;
+        letter-spacing: 12px;
+        margin-bottom: 5px;
+    }
+
+    .banner{
+        background-image: url('../img/foto-bunner-mobile.jpg');
+    }
+
+    .banner__subtitle {
+        font-size: 16px;
+        line-height: 28px;
+        margin-bottom: 20px;
+    }
+
+    .btn {
+        padding: 15px 40px ;
+    }
+
+    .about {
+        height: 310px;
+    }
+
+    .about h2 {
+        padding-top: 40px;
+    }
+
+    .about p {
+        padding: 30px;
+        font-size: 16px;
+    }
+
+    .destination img {
+        max-width: 100%;
+    }
+
+    .destination__text  {
+        text-align: center;
+        padding: 20px 40px;
+    }
+
+    .destination__text p {
+        font-size: 15px;
+        padding-top: 5px;
+        max-width: none;
+    }
+
+/* GROELANDIA */
+
+.destination__description--groenlandia .destination__title {
+    text-align: center;
+    font-size: 22px;
+}
+
+.destination__description--groenlandia .destination_paragraph {
+    text-align: center;
+    font-size: 16.4px;
+    padding: 5px 30px;
+}   
+
+.destination--groenlandia img{
+    max-width: 100%;
+}
+
+/* ANTARTIDA */
+
+    .destination--antartida {
+        margin-top: 40px;
+    }
+
+    .destination--antartida img{
+        max-width: 100%;
+    }
+     
+    .destination__description--antartida .destination__title {
+        justify-content: center;
+        font-size: 22px;
+        max-width: 100%;
+    }
+    
+    .destination__description--antartida .destination_paragraph {
+        text-align: center;
+        font-size: 16.4px;
+        max-width: 100%;
+    }
+
+    .destination__description {
+        max-width: 100%;
     }
   }
